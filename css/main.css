@@ -109,6 +109,7 @@ h1{
     height: auto;
     white-space: nowrap;
     object-fit: cover;
+    width: 15vw;
 
 
 }
@@ -699,10 +700,10 @@ h3{
 
 
   @media only screen and (max-width: 1024px) {
-    .download{
+    /* .download{
         transform: scale(0.5);
         left: -9vw;
-    }
+    } */
     #qrcode{
         left: -2vw;
     }
@@ -810,7 +811,7 @@ h3{
     }
     .download a img {
         height: auto;
-        width: auto; 
+        width: 50%; 
         margin: 0;
         
 
