@@ -67,8 +67,8 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function handleTickInit(tick) {
-  var nextYear = new Date().getFullYear() + 1;
-  Tick.count.down(nextYear + '-07-26').onupdate = function (value) {
+  var thisYear = new Date().getFullYear() ;
+  Tick.count.down(thisYear + '-07-26').onupdate = function (value) {
   tick.value = value;
 };
 };
