@@ -718,7 +718,15 @@ h3{
         padding: 13%;
 
     }
-
+    .text-overlay {
+        font-size: 0.6rem;
+    }
+    #ppn2,#ppn4{
+        right:-20%;
+    }
+    .countdown{
+        transform: scale(2.2);
+    }
   }
 @media only screen and (max-width: 600px) {
     #welcomeph{
