@@ -1,19 +1,13 @@
 'use strict'
 
-// 在這裡使用 jQuery 進網頁
 $(document).ready(function() {
-  // 顯示歡迎畫面 with fadeIn 動畫
-  $('#welcomeScreen').fadeIn(1000); // 1秒的動畫時間
-
-  // 隱藏歡迎畫面並顯示主要內容 with fadeOut 動畫
+  $('#welcomeScreen').fadeIn(1000); 
   var displayTime = 2000;
   setTimeout(function() {
       $('#welcomeScreen').fadeOut(1000, function() {
-          // 動畫完成後顯示主要內容
           $('#mainContent').fadeIn(1000);
           $('footer').fadeIn(1000);
-        //   $('.twitter-hashtag-button twitter-hashtag-button-rendered twitter-tweet-button').fadeIn(2000);
-        //   $('#xbutton').fadeIn(2000);
+
 
 
       });
