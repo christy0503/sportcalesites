@@ -1,13 +1,13 @@
 'use strict'
 
 $(document).ready(function() {
-  $('#welcomeScreen').fadeIn(1000); 
+  $('#welcomeScreen').fadeIn(1000);
   var displayTime = 2000;
   setTimeout(function() {
       $('#welcomeScreen').fadeOut(1000, function() {
           $('#mainContent').fadeIn(1000);
+          $('#spocale4p').fadeIn(1000);
           $('footer').fadeIn(1000);
-
 
 
       });
@@ -60,13 +60,22 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 });
 
-function handleTickInit(tick) {
-  var thisYear = new Date().getFullYear() ;
-  Tick.count.down(thisYear + '-07-26').onupdate = function (value) {
-  tick.value = value;
-};
-};
 
+
+function handleTickInit(tick) {
+    var thisYear = new Date().getFullYear();
+    
+    var targetDate = new Date(Date.UTC(thisYear, 6, 26)); 
+    
+    targetDate.setUTCHours(targetDate.getUTCHours() + 2);
+    
+    var targetDateString = targetDate.toISOString().split('T')[0];
+    
+    Tick.count.down(targetDateString).onupdate = function (value) {
+      tick.value = value;
+    };
+  }
+  
 
 function fadeAnime(){
 
